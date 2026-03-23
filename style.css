@@ -31,6 +31,7 @@ body{
     gap: 15px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+    height: 100vh;
 }
 .sidebar:hover{
     width: 200px;
@@ -162,4 +163,26 @@ a{
     display: flex;
     align-items: center;
     text-decoration: none;    
+}
+
+/* Footer */
+
+.sidebar-footer-div{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--bg-sidebar-hover);
+    padding: 15px 0;
+    gap: 10px;
+}
+
+.sidebar-footer .footer-logo img{
+    display: inline-block;
+    width: 80px;
+}
+
+.sidebar-footer .sidebar-footer-div .dsn,
+.sidebar-footer .sidebar-footer-div .alisson,
+.sidebar-footer .sidebar-footer-div .igor{
+    width: 0;
+    opacity: 0;
 }
