@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --bg-main: #020617;
+    --bg-sidebar: #0F172A;
+    --bg-sidebar-hover: #6366F1;
+    --text-color: #E5E7EB;
+    --text-color-sec: #9CA3AF;
+    --border-color: #1E293B;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--bg-main);
+    color: var(--text-color);
+}
+
+/* Sidebar */
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--bg-sidebar);
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 15px;
+    gap: 15px;
+}
+.sidebar:hover{
+    width: 200px;
+}
+
+/* Texto */
+.sidebar-header .text,
+.sidebar-form .text{
+    width: 0;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    color: var(--text-color);
+    font-family: "Fjalla One", "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.sidebar:hover .text{
+    opacity: 1;
+    width: auto;
+}
+
+/* Cabeçalho */
+
+.sidebar-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--bg-sidebar-hover);
+}
+
+.sidebar:hover .sidebar-header,
+.sidebar:hover a{
+    gap: 15px;
+}
+
+.sidebar-header .icon img,
+.sidebar i{
+    display: inline-block;
+    min-width: 30px;
+    width: 30px;
+}
+
+/* Formulário de busca */
+.sidebar-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--text-color-sec);
+    border-radius: 25px;
+    opacity: 0;
+    color: var(--text-color);
+    transition: all 0.4s ease;
+}
+
+.sidebar:hover form{
+    opacity: 1;
+}
+
+.sidebar-form button{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.sidebar-form input{
+    background-color: transparent;
+    padding: 5px;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+
+/* Barra de navegação */
+.sidebar-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-nav a{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-nav a .icon img{
+    display: inline-block;
+    min-width: 30px;
+    width: 30px;
+}
+
+/* Links */ 
+a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;    
+}
