@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root{
     --bg-main: #020617;
     --bg-sidebar: #0F172A;
@@ -20,11 +26,11 @@ body{
     position: fixed;
     left: 0;
     top: 0;
-    height: 576px;
+    height: 100%;
     background-color: var(--bg-sidebar);
     display: flex;
     flex-direction: column;
-    width: 80px;
+    width: 115px;
     overflow: hidden;
     transition: all 0.3s ease;
     padding: 15px;
@@ -33,7 +39,7 @@ body{
     border-bottom-right-radius: 25px;
 }
 .sidebar:hover{
-    width: 200px;
+    width: 230px;
     box-shadow: 2px 2px 8px var(--bg-sidebar-hover);
 }
 
@@ -121,6 +127,8 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    flex: 1;
+    padding-top: 10px;
 }
 
 .sidebar-nav a{
@@ -128,6 +136,7 @@ body{
     align-items: center;
     padding: 10px 10px;
     border-radius: 15px;
+    height: 80px;
 }
 
 .sidebar-nav a .icon img{
@@ -171,23 +180,17 @@ a{
     flex-direction: column;
     align-items: center;
     border-top: 1px solid var(--bg-sidebar-hover);
+    width: 100%;
 }
 
 .sidebar-footer-div{
     display: flex;
     flex-direction: column;
-    padding: 15px 0;
-    gap: 10px;
+    padding-top: 15px;
+    padding-bottom: 50px;
 }
 
 .sidebar-footer .footer-logo img{
     display: inline-block;
     width: 80px;
-}
-
-.sidebar-footer .sidebar-footer-div .dsn,
-.sidebar-footer .sidebar-footer-div .alisson,
-.sidebar-footer .sidebar-footer-div .igor{
-    width: 0;
-    opacity: 0;
 }
